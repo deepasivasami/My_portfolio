@@ -1,68 +1,243 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+   
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+body{
+  font-family: Arial, sans-serif;
+    background:#020617;
+ color: #03F9E1;
   margin: 0;
+}
+
+
+
+.header{
+  display:flex;
+  width: 100%;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  position: fixed;
+  background:#020617;
+}
+
+.logo{
+
+  font-size:24px;
+  font-weight:bold;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color: #03F9E1;
+  font-size:16px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+.hero{
+  padding:80px 10%;
+}
+
+.hero-container{
+  margin-top: 5%;
+    display:flex;
+    flex-wrap: wrap;
+  justify-content:space-around;
+  align-items:start;
+  background:linear-gradient(135deg,#1c0033,#070012);
+  padding:60px;
+  border-radius:20px;
+
+}
+
+
+.hero-left{
+  max-width:500px;
+}
+
+.hero-left h1{
+  font-size:32px;
+  color:#DDF3F0;
+  text-align: start;
+}
+
+.hero-left h2{
+   text-align: start;
+   font-size:32px;
+  margin:10px 0;
+    color: #03F9E1;
+}
+
+.hero-left p{
+   text-align: start;
+  margin-top:20px;
+  line-height:1.6;
+   color:#cbd5f5;
+}
+
+.stats{
+  display:flex;
+  gap:40px;
+  margin-top:30px;
+}
+
+.stats h3{
+  color: #03F9E1;
+  font-size:24px;
+}
+
+
+
+
+.icon {
+  color: #03F9E1;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.icon p {
+  width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #03F9E1;
+    font-size: 1.2rem;
+    box-shadow: 0 0 8px #03ceee;
+    transition: .3s;
+    text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.icon p:hover {
+  background-color: #475569; 
+  transform: scale(1.1);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.hero-right{
+  width: 300px;
+  height: 400px;
+  border-radius: 50px;
+  
 }
+
+.hero-right img{
+  width: 100%;
+  height: 100%;
+  border-radius:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-icon{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+
+@media (max-width:768px){
+
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-icon{
+    display:block;
+    font-size:28px;
+    cursor:pointer;
+  }
+
+  .nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    color:aquamarine ;
+    background:#020617;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+  }
+
+  .nav a{
+    padding:15px;
+    width:100%;
+    text-align:center;
+  }
+
+  .nav.active{
+    display:flex;
+  }
+
+  .hero{
+    padding:120px 5%;
+  }
+
+  .hero-container{
+    flex-direction: column;
+    padding:30px;
+    text-align:center;
+  }
+
+  .hero-left{
+    max-width:100%;
+  }
+
+  .hero-left p{
+  margin-top:20px;
+  text-align:justify;
+  text-align-last:center;
+  line-height:1.6;
+  color:#cbd5f5;
+}
+
+  .stats{
+    justify-content:start;
+    gap:20px;
+  }
+
+  .icon{
+    justify-content:center;
+  }
+  .icon {
+    display: flex;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+  .hero-right{
+    margin-top:30px;
+    width:100%;
+    height:auto;
+    border:none;
+  }
+
+  .hero-right img{
+    width:100%;
+    height:auto;
+  }
+
+}
+
