@@ -99,11 +99,12 @@ nav a:hover{
 
 
 .icon {
-  color: #03F9E1;
+  color: #07e3e3;
   display: flex;
     gap: 15px;
     margin-top: 30px;
 }
+
 
 .icon p {
   width: 42px;
@@ -112,14 +113,15 @@ nav a:hover{
     place-items: center;
     border-radius: 50%;
     color: #03F9E1;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     box-shadow: 0 0 8px #03ceee;
     transition: .3s;
     text-decoration: none;
 }
 
 .icon p:hover {
-  background-color: #475569; 
+  color: #057d6d;
+  background-color: #0982a0; 
   transform: scale(1.1);
 }
 
