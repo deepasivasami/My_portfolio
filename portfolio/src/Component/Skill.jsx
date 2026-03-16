@@ -1,52 +1,25 @@
-
 import React from "react";
 import "./skill.css";
 
 const frontendSkills = [
-  { name: "HTML",
-     icon: "/html-5.png", 
-     class: "html" 
-    },
-  { name: "CSS", 
-    icon: "/css-3.png", 
-    class: "css" 
-  },
-  { name: "Bootstrap", 
-    icon: "/Boostrap.png",
-     class: "bootstrap" 
-    },
-  { name: "JavaScript", 
-    icon: "/js.png", 
-    class: "js" 
-  }
+  { name: "HTML", icon: "/html-5.png", progress: "100%" },
+  { name: "CSS", icon: "/css-3.png", progress: "100%" },
+  { name: "Bootstrap", icon: "/Boostrap.png", progress: "100%" },
+  { name: "JavaScript", icon: "/js.png", progress: "100%" }
 ];
 
 const backendSkills = [
-  { 
-    name: "React.js",
-     icon: "/react.png", 
-     class: "react"
-     },
-  { 
-    name: "MongoDB", 
-    icon: "/mongo.png",
-     class: "mongodb"
-     },
-  { 
-    name: "Node.js", 
-    icon: "/node.png",
-     class: "node" 
-    },
-  { 
-    name: "JQury",
-     icon: "/mysql.png",
-      class: "mysql"
-     }
+  { name: "React js", icon: "/react.png", progress: "100%" },
+  { name: "MongoDB", icon: "/mongo.png", progress: "100%"},
+  { name: "Node js", icon: "/node.png", progress: "100%"},
+  { name: "Express js", icon: "/express.png", progress:"100%"}
 ];
 
 const Skill = () => {
   return (
+    <>
     <section className="skills" id="skills">
+
       <h1 className="heading">
         My <span>Skills</span>
       </h1>
@@ -67,11 +40,13 @@ const Skill = () => {
               </p>
 
               <div className="progress-bar">
-                <div className={`progress ${skill.class}`}></div>
+                <div
+                  className="progress"
+                  style={{ "--progress-width": skill.progress }}
+                ></div>
               </div>
             </div>
           ))}
-
         </div>
 
         {/* Backend */}
@@ -88,15 +63,20 @@ const Skill = () => {
               </p>
 
               <div className="progress-bar">
-                <div className={`progress ${skill.class}`}></div>
+                <div
+                  className="progress"
+                  style={{ "--progress-width": skill.progress }}
+                ></div>
               </div>
             </div>
           ))}
-
         </div>
 
       </div>
     </section>
+    
+
+    </>
   );
 };
 

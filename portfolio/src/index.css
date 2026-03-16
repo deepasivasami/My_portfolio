@@ -112,7 +112,8 @@ nav a:hover{
     display: grid;
     place-items: center;
     border-radius: 50%;
-    color: #03F9E1;
+    background-color: #04cbc1;
+    color: #075e55;
     font-size: 1.5rem;
     box-shadow: 0 0 8px #03ceee;
     transition: .3s;

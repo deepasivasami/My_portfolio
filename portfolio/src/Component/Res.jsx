@@ -24,37 +24,37 @@ const experiences = [
 
 const Res = () => {
   return (
-    <div className="timeline-section">
-      <h2>My Education</h2>
+    <>
+      <div className="timeline-section">
+        <h2>My Education</h2>
 
-      <div className="timeline">
-        {experiences.map((exp, index) => (
-          <div className="timeline-item" key={index}>
-            <div className="timeline-date">{exp.date}</div>
+        <div className="timeline">
+          {experiences.map((exp, index) => (
+            <div className="timeline-item" key={index}>
+              <div className="timeline-date">{exp.date}</div>
 
-            <div className="timeline-content">
-              <h3>{exp.education}</h3>
-              <p>{exp.institution}</p>
-              <span>{exp.location}</span>
+              <div className="timeline-content">
+                <h3>{exp.education}</h3>
+                <p>{exp.institution}</p>
+                <span>{exp.location}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div className="resume-frame">
+          <h2>My Resume</h2>
+
+          <iframe
+            src="https://www.canva.com/design/DAHCOXX6fOU/E8VdxF2w4sYBF3I4WG4-Rw/view?embed#page=1"
+            title="My Resume"
+            
+            allowFullScreen
+          ></iframe>
+        </div>
+
       </div>
-
-
- <div className="resume-frame">
-        <h2>My Resume</h2>
-
-        <iframe
-          src="https://www.canva.com/design/DAHCOXX6fOU/E8VdxF2w4sYBF3I4WG4-Rw/view?embed"
-          title="My Resume"
-          width="100%"
-          height="600"
-          frameBorder="0"
-          allowFullScreen
-        ></iframe>
-      </div>
-    </div>
+    </>
   );
 };
 
